@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <button onclick="counter()">Click me</button>
+    <p style="display:none;" class="display-4">You clicked me&nbsp;<b></b> <span>time</span></p>
+</div>
+<script type="text/javascript">
+    let count = 0;
+    function counter() {
+        count += 1;
+        if (count > 1) $('span').text('times');
+        $('p').show();
+        $('b').text(count);
+    }
+</script>
